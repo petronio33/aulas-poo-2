@@ -12,6 +12,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 
 /**
  *
@@ -25,6 +26,8 @@ public class Aula1Controller implements Initializable {
     private Button button;
     @FXML
     private Label labelSurpresa;
+    @FXML
+    private TextField TextFieldMensagem;
     
     @FXML
     private void handleButtonAction(ActionEvent event) {
@@ -43,9 +46,9 @@ public class Aula1Controller implements Initializable {
 
     @FXML
     private void surpresa(ActionEvent event) {
-        System.out.println("Voce ganhou 10 pontos");
+        String t  = TextFieldMensagem.getText();
         
-        labelSurpresa.setText("FALEI PRA NÃO CLICAR CORNO!");
+        labelSurpresa.setText(t);
     }
     
 }
